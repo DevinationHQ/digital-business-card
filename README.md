@@ -26,6 +26,14 @@ No `npm install` is required. Port busy? Use `npm run dev -- --port 4174`.
 
 The founder profile includes only the owner-approved display name, image and video. Its email, phone, messaging and project links are demonstration data. Theo and Mira are fictional generated examples. No real phone numbers, email addresses, address, collected contacts, credentials or private account data are included. The neutral starter remains available in the editor.
 
+## One editable Digital Business Card. Yours to keep.
+
+Keep the source, customise it and host your own copy. No Devination membership or kit subscription is required. Hosting/domain and optional AI services have their own terms. Preserve the licence/dependency notices; media permissions are in ASSETS.md.
+
+## Set up with an AI agent
+
+Follow the [AI-agent setup guide](https://devinationhq.github.io/digital-business-card/agent-guide.html) for copy-ready prompts to customise, add media, publish and fix problems. The same prompts are in [docs/AI-SETUP.md](docs/AI-SETUP.md). An agent needs file/browser access to perform actions; a chat-only assistant can prepare the changes for you.
+
 ## Beginner setup
 
 Follow the [browser setup guide](https://devinationhq.github.io/digital-business-card/guide.html) or [SETUP.md](docs/SETUP.md). Both explain how to add your own images and videos.

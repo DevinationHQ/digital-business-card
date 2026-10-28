@@ -2,6 +2,8 @@
 
 You need a free GitHub account and a web browser. You do not need to install anything for this route. A repository is simply your own copy of the website files.
 
+Prefer an AI agent? Read [AI-SETUP.md](AI-SETUP.md) for setup, media, publishing and troubleshooting prompts.
+
 ## 1. Copy the template
 
 Open the [Devination template repository](https://github.com/DevinationHQ/digital-business-card). Choose **Use this template → Create a new repository**. Choose your account as Owner, name the copy `my-digital-business-card`, choose **Public**, and create it. Public means anyone can read the files: include only details and media you want public.

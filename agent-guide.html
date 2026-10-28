@@ -1,0 +1,80 @@
+<!doctype html><html lang="en" data-theme="forest"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Set up with your AI agent · Devination Digital Business Card</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="card.css"><link rel="stylesheet" href="themes.css"><style>.prompt-block{margin:22px 0}.prompt-block pre{font:13px/1.7 ui-monospace,monospace}.copy-prompt{margin-left:auto;cursor:pointer;min-height:44px}</style></head><body><header class="site-top"><a class="wordmark" href="./">DEVINATION<span> / DIGITAL BUSINESS CARD</span></a><a class="header-link" href="guide.html">Manual setup guide ↗</a></header><main class="doc"><h1>Set up your Digital Business Card with an AI agent</h1><p>You can ask an AI coding agent to customise this template for you. It needs access to your copy of the files to edit them. A chat-only assistant can prepare the JSON and instructions, but cannot update your computer or GitHub unless it has the necessary tools and permissions.</p><h2>1. Give the agent your own copy</h2><p>Create a repository with <strong>Use this template</strong>, then open that repository or its downloaded folder in your agent’s workspace. Tell it which folder to use. If you already have a copy, use that copy rather than starting over. Do not give the agent passwords, tokens or private contact lists.</p><p>Start with public details, a portrait and an optional short video you have permission to publish. A paid AI or video account is not required by this template; your chosen agent/provider may have its own plan and usage costs.</p><h2>2. Copy the setup prompt</h2><p>Replace the square-bracket fields, remove details you do not want published, then paste this into your agent. File paths are examples: give it your actual media files.</p><section class="prompt-block"><button type="button" class="small-button copy-prompt" aria-label="Copy prompt 1">Copy prompt</button><pre>Help me customise my copy of the Devination Digital Business Card template.
+
+Work only in this project: [MY PROJECT FOLDER OR REPOSITORY].
+Read AGENTS.md, README.md, docs/SETUP.md, docs/VIDEO-GUIDE.md,
+LICENSE, ASSETS.md and THIRD_PARTY_NOTICES.md first. Inspect the
+existing files and preserve work already there.
+
+Use these details, all intended for public display:
+Name: [NAME]
+Role: [ROLE]
+Short introduction: [BIO]
+Location: [OPTIONAL PUBLIC LOCATION]
+Theme: [cobalt, ivory or forest]
+Email: [PUBLIC EMAIL OR LEAVE EMPTY]
+Call number: [PUBLIC NUMBER OR LEAVE EMPTY]
+Message number/channel: [PUBLIC NUMBER + SMS/WHATSAPP OR LEAVE EMPTY]
+Project links: [TITLES, SHORT DESCRIPTIONS AND FULL URLS]
+Portrait: [FILE I HAVE PROVIDED, OR INITIALS ONLY]
+Video: [FILE I HAVE PROVIDED, OR NONE]
+
+Update data/card.json with my details. Reuse the template rather than
+rebuilding it. Copy permitted media into assets/photos and assets/video,
+use exact relative paths without a leading slash, and keep a fallback
+image for video. Do not invent my details, testimonials or projects.
+
+Set example=false for my personal card. Keep video muted with pause/play
+and reduced-motion support. Remove optional demo navigation and the
+Devination community promotion block from my personal site if I do not
+want them; do not change licence/dependency notices. Keep example assets
+until you have checked whether anything still uses them.
+
+Run npm test and npm run build, then open a local HTTP preview with
+npm run dev. Check my profile, media, links, contact download and QR URL.
+Explain any checks you cannot perform. A local QR is not ready to print.
+
+Prepare the finished files for review. Do not publish or make a new
+public repository until I explicitly request that step. Ask only for
+missing details that prevent the work, and give me a concise result.</pre></section><p>The repository tests check the supplied example profiles. Keep synthetic examples intact and edit your personal profile in data/card.json. The example-contact test accepts a real customised default profile; only the supplied example files must retain demo contacts.</p><h2>3. Optional: add or improve your media</h2><section class="prompt-block"><button type="button" class="small-button copy-prompt" aria-label="Copy prompt 2">Copy prompt</button><pre>In this Digital Business Card project, use the photo/video files I have
+provided. Inspect their format, dimensions and size. Keep my originals
+unchanged. Prepare small delivery copies if useful, preserving required
+provider marks. Put the photo under assets/photos and the video under
+assets/video. Update data/card.json to match the exact filenames.
+Use the photo as the fallback. Verify portrait crop, muted playback,
+pause/play and reduced-motion behaviour in the real local preview.
+
+If I have not supplied a video, leave it empty and give me a tailored
+image-to-video prompt based on my permitted photo and actual work.
+Do not buy/generate media, clone a voice or upload my likeness to another
+service without my explicit instruction for that service and use.</pre></section><p>For generation, use this starting brief in the provider you choose:</p><section class="prompt-block"><button type="button" class="small-button copy-prompt" aria-label="Copy prompt 3">Copy prompt</button><pre>Use my attached permitted reference image as the identity reference.
+Create one hyperrealistic portrait 9:16 shot of [PERSON] doing
+[ONE SMALL BELIEVABLE ACTION] in [ACTUAL OR CLEARLY ILLUSTRATIVE WORKSPACE].
+Keep the face, clothing and objects consistent. Use [LIGHTING] and one
+slow [CAMERA MOVE]. Keep the face and action central for a mobile crop.
+About 8 seconds if supported. No added captions, dialogue or soundtrack.
+Preserve required provider labels. Do not depict invented client work
+as a real completed project.</pre></section><p>Model/account controls and generation charges vary. See the video guide for worked Theo/Mira prompts and checks for hands, faces, objects and looping.</p><h2>4. When ready, ask the agent to publish</h2><p>Review the preview first. Then replace the fields in this separate prompt. Public means the repository and uploaded media can be read by anyone.</p><section class="prompt-block"><button type="button" class="small-button copy-prompt" aria-label="Copy prompt 4">Copy prompt</button><pre>I have reviewed my Digital Business Card and want to publish this exact
+project to my GitHub account/organisation: [OWNER].
+Repository name: [REPOSITORY]. Visibility: public.
+Use my existing authenticated GitHub connection; do not ask me to paste
+a password or token. Confirm the signed-in account and intended owner.
+If the repository already exists, inspect it and preserve its history
+and other files. Do not overwrite an unrelated project or force-push.
+
+Publish the reviewed files to this repository, enable GitHub Pages using
+the included GitHub Actions workflow, and wait for the actual result.
+If account policy blocks Pages, report the real error and suggest a
+suitable static host. Do not create a paid service or domain purchase.
+
+Check the deployed page, image/video paths, contact routes and share/QR
+address including the repository subpath. Leave publicUrl blank to use
+the actual page, or set it to the verified published address. Do not
+call localhost a live deployment. Give me the repository and website
+links, the deployment result and any checks still requiring my phone.</pre></section><p>For a commercial site that primarily facilitates sales/transactions or commercial SaaS, use a suitable host rather than GitHub Pages. The kit can build to dist for another static host. Check GitHub’s Pages policy for your use case.</p><h2>5. If something is not working</h2><section class="prompt-block"><button type="button" class="small-button copy-prompt" aria-label="Copy prompt 5">Copy prompt</button><pre>Diagnose this problem in my existing Digital Business Card copy:
+[WHAT I EXPECTED, WHAT HAPPENED, AND ANY ERROR MESSAGE].
+Inspect the current files and actual browser result. Trace the smallest
+cause, preserve my details and media, and make a focused fix. Check exact
+filename case, relative asset paths, data/card.json validity, deployment
+status and the main URL without an example query where relevant.
+Do not replace the whole project or disable validation to hide an error.
+Run the relevant checks and show the actual fixed result, with any limits.</pre></section><h2>One editable card. Yours to keep.</h2><p>You receive editable source under the included MIT code licence. Keep your own copy and change it over time; Devination membership is optional. Keep the copyright/licence and dependency notices. Hosting, domain names and chosen AI/video services have their own availability and terms. The founder likeness and example media have separate permissions in ASSETS.md; use your own permitted identity media for your personal card.</p><p><a href="video-guide.html">Video guide and worked prompts</a> · <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">GitHub Pages policy</a></p><p id="copy-status" role="status" aria-live="polite"></p></main><footer class="kit-footer"><a href="./">See the examples</a><a href="make.html">Make yours</a></footer><script>document.querySelectorAll('.copy-prompt').forEach(button=>button.addEventListener('click',async()=>{const pre=button.nextElementSibling;try{await navigator.clipboard.writeText(pre.textContent);document.getElementById('copy-status').textContent='Prompt copied. Replace the bracketed fields before using it.';button.textContent='Copied';}catch{const range=document.createRange();range.selectNodeContents(pre);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);document.getElementById('copy-status').textContent='Prompt selected. Copy it with your keyboard.';}}));</script></body></html>
