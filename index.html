@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An adaptable digital business card. Made with the Devination Digital Business Card Kit.">
+  <meta name="theme-color" content="#071916">
+  <title>Digital Business Card Kit · Devination</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="card.css"><link rel="stylesheet" href="themes.css">
+  <script type="module" src="card.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#card">Skip to card</a>
+  <header class="site-top"><a class="wordmark" href="./">DEVINATION<span> / DIGITAL BUSINESS CARD</span></a><a class="header-link" href="make.html">Make yours <span aria-hidden="true">↗</span></a></header>
+  <nav class="example-nav" aria-label="Example cards"><span>Explore the examples</span><a href="./" data-example="starter">Forest / Chioké</a><a href="?example=theo" data-example="theo">Cobalt / Theo</a><a href="?example=mira" data-example="mira">Ivory / Mira</a></nav>
+  <p id="preview-notice" class="notice" hidden></p>
+  <main class="shell" id="content">
+    <section class="phone-frame" id="card" aria-label="Digital Business Card" aria-busy="true">
+      <div class="hero"><div class="hero-lines" aria-hidden="true"></div><img class="hero-photo" id="portrait" alt="" width="768" height="1152" hidden><video class="hero-video" id="portrait-video" muted loop playsinline preload="none" hidden></video><div class="portrait-placeholder" id="placeholder"><div class="portrait-disc"><span id="placeholder-initials" aria-hidden="true">AR</span></div></div><span class="location-pill" id="location"></span><button id="motion-toggle" class="motion-toggle" hidden>Play video</button><span class="hero-caption" id="hero-caption">YOUR WORK. ONE CONNECTION.</span></div>
+      <div class="card-body">
+        <div class="avatar" id="initials" aria-hidden="true"></div><p class="eyebrow" id="eyebrow"></p>
+        <h1 class="card-name" id="name">Loading your card…</h1><p class="card-role" id="role"></p><p class="profile-bio" id="bio"></p><div class="badge-row" id="badges"></div>
+        <button class="primary-action" id="save-contact">↓ Save contact</button>
+        <div class="action-row"><button class="secondary-action" id="share">↗ Share card</button><button class="secondary-action" id="qr">▦ Show QR</button></div>
+        <div class="quick-grid" id="contacts"></div>
+        <p class="section-kicker">Explore my work</p><div class="brand-list" id="projects"></div>
+        <p class="fiction-note" id="fiction-note" hidden>Fictional example · AI-generated portrait · links use example.com</p>
+      </div>
+    </section>
+    <aside class="side-copy"><p class="side-overline" id="side-label"></p><h2 id="headline"></h2><p id="intro"></p><div class="side-rule"></div><div class="side-detail"><b>01</b><span><strong>Make a connection.</strong><br>A link or QR brings someone straight to your card.</span></div><div class="side-detail"><b>02</b><span><strong>Keep in touch.</strong><br>Save a contact file to your phone or address book.</span></div><div class="side-detail"><b>03</b><span><strong>Find the work.</strong><br>Your projects and contact routes, together in one place.</span></div><p class="side-note">Your card, your hosting. No account or subscription required by this kit.</p><a class="make-link" href="make.html">Start with this design <span aria-hidden="true">↗</span></a><p class="local-note" id="local-note" hidden>This is a local preview. Publish your card before sharing its QR with another phone.</p></aside>
+  </main>
+  <footer class="kit-footer"><span>Made with Devination</span><a href="guide.html">Setup guide</a><span>Approved showcase + fictional examples.</span></footer>
+  <dialog id="share-dialog"><div class="dialog-top"><h2 id="dialog-title">Share your card</h2><button class="close" id="close-dialog" aria-label="Close dialog">×</button></div><p id="dialog-help"></p><div id="qr-image" class="qr-box" hidden></div><label class="field-label" for="share-url">Card link</label><div class="copy-field"><input id="share-url" readonly><button id="copy-link">Copy</button></div><button class="line-button" id="download-qr" hidden>Download QR image</button><p class="quiet" id="qr-warning"></p></dialog>
+  <div class="toast" role="status" id="status" hidden></div>
+</body></html>

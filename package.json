@@ -1,0 +1,16 @@
+{
+  "name": "devination-digital-business-card-kit",
+  "version": "0.3.1",
+  "private": true,
+  "description": "An adaptable static digital card with three themes and a browser editor.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "test": "node --test tests/card.test.mjs",
+    "build": "node tools/build.mjs"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "theme": "ivory",
+  "name": "Mira Vale",
+  "role": "Ceramic designer & independent maker",
+  "location": "Bath, UK",
+  "initials": "MV",
+  "eyebrow": "MADE WITH INTENTION",
+  "bio": "Thoughtful objects for everyday rituals. Clay, quiet details and a little imperfection.",
+  "email": "mira@example.com",
+  "phone": "+447700900102",
+  "photo": "assets/photos/mira-video-poster.jpg",
+  "video": "assets/video/mira-hero.mp4",
+  "publicUrl": "",
+  "badges": [
+    "Ceramics",
+    "Small-batch design"
+  ],
+  "sideLabel": "FROM MY STUDIO TO YOUR EVERYDAY.",
+  "headline": "Good things take shape slowly.",
+  "intro": "I make objects that invite you to slow down: a favourite cup, a well-used bowl, a small moment of care. Here is a little of the work and the story behind it.",
+  "example": true,
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "The everyday collection",
+      "description": "Simple forms with a life beyond the shelf.",
+      "url": "https://example.com/mira/collection"
+    },
+    {
+      "id": "project-2",
+      "title": "From the studio",
+      "description": "Materials, making and moments in between.",
+      "url": "https://example.com/mira/journal"
+    },
+    {
+      "id": "project-3",
+      "title": "Commissions & collaborations",
+      "description": "Make room for something personal.",
+      "url": "https://example.com/mira/contact"
+    }
+  ],
+  "messagePhone": "+447700900102",
+  "messageChannel": "sms",
+  "videoAutoplay": true
+}

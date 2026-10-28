@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "theme": "cobalt",
+  "name": "Theo Mercer",
+  "role": "Creative technologist & 3D designer",
+  "location": "Manchester, UK",
+  "initials": "TM",
+  "eyebrow": "DESIGN IN ANOTHER DIMENSION",
+  "bio": "Expressive digital experiences, architectural visualisation and ideas made tangible.",
+  "email": "theo@example.com",
+  "phone": "+447700900101",
+  "photo": "assets/photos/theo-video-poster.jpg",
+  "video": "assets/video/theo-hero.mp4",
+  "publicUrl": "",
+  "badges": [
+    "Creative development",
+    "Interactive design"
+  ],
+  "sideLabel": "FOR THE NEXT GOOD IDEA.",
+  "headline": "A little curiosity. A lot of possibility.",
+  "intro": "From expressive web experiences to useful little experiments, I build at the meeting point of design and code. Have something in mind? Let\u2019s explore it.",
+  "example": true,
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Selected experiments",
+      "description": "Playful interfaces and interactive ideas.",
+      "url": "https://example.com/theo/work"
+    },
+    {
+      "id": "project-2",
+      "title": "Maker notes",
+      "description": "The process, including the messy bits.",
+      "url": "https://example.com/theo/notes"
+    },
+    {
+      "id": "project-3",
+      "title": "Start a conversation",
+      "description": "A home for an idea worth exploring.",
+      "url": "https://example.com/theo/contact"
+    }
+  ],
+  "messagePhone": "+447700900101",
+  "messageChannel": "sms",
+  "videoAutoplay": true
+}

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "theme": "forest",
+  "name": "Alex Rowan",
+  "role": "Independent creator",
+  "location": "United Kingdom",
+  "initials": "AR",
+  "eyebrow": "A LITTLE ABOUT ME",
+  "bio": "Making useful things and sharing what I learn along the way.",
+  "email": "alex@example.com",
+  "phone": "",
+  "photo": "",
+  "video": "",
+  "publicUrl": "",
+  "badges": [
+    "Independent",
+    "Curious",
+    "Making things"
+  ],
+  "sideLabel": "YOUR WORK. ONE CONNECTION.",
+  "headline": "A small card. A proper introduction.",
+  "intro": "A place for the work you make, the things you care about and the next good conversation. Start with this card and make it yours.",
+  "example": true,
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "My portfolio",
+      "description": "A selection of things I have made.",
+      "url": "https://example.com/portfolio"
+    },
+    {
+      "id": "project-2",
+      "title": "Field notes",
+      "description": "Ideas, experiments and what I learned.",
+      "url": "https://example.com/notes"
+    },
+    {
+      "id": "project-3",
+      "title": "Current project",
+      "description": "Something new, taking shape.",
+      "url": "https://example.com/project"
+    }
+  ]
+}

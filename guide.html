@@ -1,0 +1,48 @@
+<!doctype html><html lang="en" data-theme="forest"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your first digital business card · Setup guide</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="card.css"><link rel="stylesheet" href="themes.css"></head><body>
+<header class="site-top"><a class="wordmark" href="./">DEVINATION<span> / DIGITAL BUSINESS CARD</span></a><a class="header-link" href="make.html">Make yours ↗</a></header>
+<main class="doc"><p class="side-overline">THE BEGINNER ROUTE</p>
+<h1>Make and publish your Digital Business Card</h1>
+<p>You need a free GitHub account and a web browser. You do not need to install anything for this route. A repository is simply your own copy of the website files.</p>
+<h2>1. Copy the template</h2>
+<p>Open the <a href="https://github.com/DevinationHQ/digital-business-card">Devination template repository</a>. Choose <strong>Use this template → Create a new repository</strong>. Choose your account as Owner, name the copy <code>my-digital-business-card</code>, choose <strong>Public</strong>, and create it. Public means anyone can read the files: include only details and media you want public.</p>
+<h2>2. Put your copy online</h2>
+<p>In your new repository, open <strong>Settings → Pages</strong>. Under <strong>Build and deployment → Source</strong>, choose <strong>GitHub Actions</strong>. Open <strong>Actions → Publish card to GitHub Pages → Run workflow</strong>, choose <code>main</code>, and run it. Wait for the green success tick. <strong>Settings → Pages</strong> shows your website address, usually <code>https://YOUR-ACCOUNT.github.io/my-digital-business-card/</code>.</p>
+<h2>3. Upload your image and video</h2>
+<p>In your repository&#x27;s <strong>Code</strong> tab, open <code>assets</code>, then <code>photos</code>. Choose <strong>Add file → Upload files</strong>, drop in your portrait (for example <code>my-photo.jpg</code>), and choose <strong>Commit changes</strong> to <code>main</code>. For video, open <code>assets/video</code> and repeat with <code>my-hero.mp4</code>.</p>
+<p>Use simple lowercase filenames without spaces. A portrait image and portrait 9:16 MP4 work well. Keep a fallback photo even if using video. A short H.264 MP4 around 1–3 MB is a practical starting point. Keep browser uploads below 25 MB per file; compress a delivery copy if necessary. Do not upload your huge original export.</p>
+<p>Wait for the next green Actions run. Images/videos must be uploaded to your own copy: typing a file path in the editor does not upload a file. See <a href="video-guide.html">VIDEO-GUIDE.md</a> for generating a video and choosing a fallback image.</p>
+<h2>4. Add your details</h2>
+<p>Open your published website and select <strong>Make yours</strong>. Choose a starting profile and theme. Replace the name, introduction, email, phone, message number and project links. Leave unwanted contact fields empty.</p>
+<p>Enter the exact paths to your uploaded files:</p>
+<ul>
+<li><strong>Portrait file path:</strong> <code>assets/photos/my-photo.jpg</code></li>
+<li><strong>Hero video file path:</strong> <code>assets/video/my-hero.mp4</code></li>
+<li><strong>Video playback:</strong> choose automatic muted playback or visitor-initiated playback.</li>
+</ul>
+<p>Leave either media field empty if you do not want it. Choose <strong>Preview my card</strong>, check the result, then use your browser&#x27;s Back button to return. If custom media do not appear, check the filenames, upload location and deployment status.</p>
+<h2>5. Save and publish your changes</h2>
+<p>Choose <strong>Download card JSON</strong>. Open that downloaded <code>card.json</code> with a text editor and copy all its text. In GitHub, open <code>data/card.json</code>, choose the pencil, select all existing text and replace it with your downloaded text. Choose <strong>Commit changes</strong> to <code>main</code>.</p>
+<p>Do not upload it beside the existing file or rename it <code>card (1).json</code>. The exact destination is <code>data/card.json</code>. Wait for the green Actions tick, then refresh your website. The editor creates a temporary draft; downloading JSON alone does not update the live card.</p>
+<h2>6. Test and share</h2>
+<p>Open the main website address without <code>?example=theo</code> or <code>?example=mira</code>. Check your photo/video, all links, Call and Message. Save the contact file on your phone. Use <strong>Show QR → Download QR image</strong> and scan it on a second device before printing.</p>
+<p>The optional published-link setting should contain the actual website address, including the repository path. Leaving it blank shares the current page. Never print a QR created from a local preview.</p>
+<p>Download JSON before closing the editor tab. Import it later to resume. For local editing instead, install Node.js 20+, run <code>npm run dev</code> in the extracted repository folder, and open the printed address. No <code>npm install</code> is needed.</p>
+<h2>Common fixes</h2>
+<ul>
+<li><strong>Loading/fetch error:</strong> use <code>npm run dev</code> and open its HTTP address, not a <code>file://</code> URL.</li>
+<li><strong>Port 4173 is busy:</strong> use <code>npm run dev -- --port 4174</code>.</li>
+<li><strong>Portrait missing:</strong> check exact filename/case, upload location and path. GitHub is case-sensitive. The path should start <code>assets/</code>, with no leading slash, so project sites work.</li>
+<li><strong>Workflow missing:</strong> ensure your copy includes <code>.github/workflows/pages.yml</code>, and Actions are enabled. ZIP uploads can hide dotfolders in your file browser; use GitHub&#x27;s template feature when available.</li>
+<li><strong>Deployment denied:</strong> check Pages source is GitHub Actions, repository policy permits Pages and the github-pages environment allows <code>main</code>. Consult GitHub&#x27;s actual error; do not add personal access tokens to fix a Pages workflow.</li>
+<li><strong>Downloaded QR works on the laptop only:</strong> you used a local preview link. Open the published site and generate a fresh QR.</li>
+<li><strong>An old address opens:</strong> check <code>publicUrl</code>, clear it or replace it with the current hosted URL, commit, and regenerate your QR.</li>
+<li><strong>My card still shows the example:</strong> make sure you replaced <code>data/card.json</code>, not a file beside it, and open the main URL without <code>?example=theo</code> or <code>?example=mira</code>.</li>
+</ul>
+<p>For another static host, run <code>npm run build</code> and upload <code>dist/</code>. Do not upload credentials, private source notes or an existing app database. A custom domain is optional and configured with your hosting provider.</p>
+<p>Official GitHub references (checked 28 October 2026):</p>
+<ul>
+<li>https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template</li>
+<li>https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages</li>
+</ul>
+<h2>Hero video and contact actions</h2>
+<p>Read VIDEO-GUIDE.md for generating, inspecting and implementing a hero video. The first showcase’s name/image/video are included by permission; all other media are fictional. All contact data are demonstrations. Theo and Mira’s clips are included; replace them with your own permitted media when making a personal card. Call and Message buttons appear when their numbers are supplied. Message can open SMS or WhatsApp. Reserved example mobile numbers and example.com email actions are intercepted as demonstrations; enter your own public details to activate real contact routes. Ofcom source checked 28 October 2026: https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbers-for-drama</p></main><footer class="kit-footer"><a href="./">See the cards</a><a href="make.html">Make yours</a></footer></body></html>
