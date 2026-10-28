@@ -2,6 +2,42 @@
 
 You can ask an AI coding agent to customise this template for you. It needs access to your copy of the files to edit them. A chat-only assistant can prepare the JSON and instructions, but cannot update your computer or GitHub unless it has the necessary tools and permissions.
 
+## Change more than your details
+
+The browser editor is a convenient starting point. Your own source files are fully customisable: an AI coding agent with access to the project can edit its words, colours, typography, layout, media, sections, links, interactions and features. Describe the result you want in normal language; you do not need to know the filename. The agent can inspect and change the relevant HTML, CSS, JavaScript and JSON.
+
+Try one change at a time, review the local result, then refine it:
+
+```text
+Make it warm and editorial. Put my projects before the contact buttons.
+```
+
+```text
+Use fresh green, lead with my video and add a booking link to [MY BOOKING URL].
+```
+
+```text
+Remove the video, add a services section with [MY SERVICES], and make contacting me the priority.
+```
+
+```text
+Make the name larger, reduce the spacing, and show me the result at phone width.
+```
+
+Add this instruction to a larger redesign:
+
+```text
+You may edit any source file needed for this change, including index.html,
+card.css, themes.css, card.mjs, lib.mjs and data/card.json. Build on my
+existing project. Preserve my public details, working contact download,
+share/QR, validation, accessibility, media controls and licence notices.
+Update the build file if you add new assets or styles. Check the actual
+browser result at phone and desktop widths, run relevant tests and build,
+and explain what changed. Keep the result local for review.
+```
+
+Some new features depend on external services, accounts or hosting. Your agent should explain what needs connecting; a conversational request alone does not connect those services. A chat-only assistant without file tools can provide code and instructions, while an agent in your project can apply them.
+
 ## 1. Give the agent your own copy
 
 Create a repository with **Use this template**, then open that repository or its downloaded folder in your agent’s workspace. Tell it which folder to use. If you already have a copy, use that copy rather than starting over. Do not give the agent passwords, tokens or private contact lists.
@@ -33,8 +69,8 @@ Project links: [TITLES, SHORT DESCRIPTIONS AND FULL URLS]
 Portrait: [FILE I HAVE PROVIDED, OR INITIALS ONLY]
 Video: [FILE I HAVE PROVIDED, OR NONE]
 
-Update data/card.json with my details. Reuse the template rather than
-rebuilding it. Copy permitted media into assets/photos and assets/video,
+Update data/card.json with my details. Build on this template. If I ask for
+a new layout, design or feature, edit the relevant source files too. Copy permitted media into assets/photos and assets/video,
 use exact relative paths without a leading slash, and keep a fallback
 image for video. Do not invent my details, testimonials or projects.
 

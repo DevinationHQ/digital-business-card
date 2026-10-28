@@ -58,6 +58,8 @@ You can do the whole setup in your browser:
 
 The browser editor changes a local draft. **It does not update a hosted website**, and is not a private admin panel. Export JSON and commit it to publish. Drafts use this tab's session storage; download before closing the tab. A public `make.html` does not grant anyone write access to the repository.
 
+Before printing or posting your link, follow the [before-you-share checklist](docs/BEFORE-YOU-SHARE.md).
+
 ## Sharing and privacy
 
 QR codes are generated locally with the bundled encoder; no external QR service, analytics or visitor contact-storage endpoint is included. The host can log visits. Any external portrait URL or project link is a separate request to its operator. For the simplest privacy model, keep portrait files in this repository.
@@ -71,7 +73,7 @@ npm test
 npm run build
 ```
 
-The build validates the supplied profiles and copies public files to `dist/`. It does not publish. The GitHub workflow uploads `dist/`, not the source repository or internal review evidence.
+The build validates the supplied profiles, copies public files and documentation to `dist/`, and checks local page/document links and profile media for missing files. It does not publish. The GitHub workflow uploads `dist/`, not the source repository or internal review evidence.
 
 The QR runtime is bundled and its editable upstream source is included under `vendor-src/`. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for provenance, licences and the optional rebuild command. It requires no API key.
 

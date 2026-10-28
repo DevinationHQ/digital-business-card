@@ -46,6 +46,8 @@ The optional published-link setting should contain the actual website address, i
 
 Download JSON before closing the editor tab. Import it later to resume. For local editing instead, install Node.js 20+, run `npm run dev` in the extracted repository folder, and open the printed address. No `npm install` is needed.
 
+Before printing or posting, complete [BEFORE-YOU-SHARE.md](BEFORE-YOU-SHARE.md).
+
 ## Common fixes
 
 - **Loading/fetch error:** use `npm run dev` and open its HTTP address, not a `file://` URL.

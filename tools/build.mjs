@@ -1,10 +1,12 @@
 import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { validateCard } from '../lib.mjs';
+import { checkRelease } from './check-release.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 for (const file of ['data/card.json', 'data/examples/theo.json', 'data/examples/mira.json', 'data/examples/founder.json']) validateCard(JSON.parse(await readFile(root + file, 'utf8')));
 await rm(root + 'dist', { recursive: true, force: true });
 await mkdir(root + 'dist', { recursive: true });
-for (const name of ['index.html', 'make.html', 'guide.html', 'agent-guide.html', 'video-guide.html', 'card.css', 'themes.css', 'card.mjs', 'make.mjs', 'lib.mjs', 'assets', 'data', 'vendor', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'ASSETS.md']) await cp(root + name, root + 'dist/' + name, { recursive: true });
+for (const name of ['index.html', 'make.html', 'guide.html', 'agent-guide.html', 'video-guide.html', 'card.css', 'themes.css', 'card.mjs', 'make.mjs', 'lib.mjs', 'assets', 'data', 'docs', 'vendor', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'ASSETS.md']) await cp(root + name, root + 'dist/' + name, { recursive: true });
 await writeFile(root + 'dist/.nojekyll', '');
+await checkRelease(root + 'dist');
 console.log('Validated default and example profiles and prepared dist/. No upload or deployment performed.');
