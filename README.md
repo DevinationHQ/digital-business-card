@@ -99,6 +99,13 @@ Theo and Mira’s generated work videos are included. Read [the video guide](doc
 
 ## Keep building with Devination
 
-Made your Digital Business Card? Explore [Devination’s resources](https://devination.net/resources/) for related tools and guides, or bring a practical question to the [free community pilot](https://community.devination.net/). The pilot currently supports discussion on published posts; the wider community experience is still being developed.
+Made your Digital Business Card? Explore [Devination’s resources](https://devination.net/resources/) for related tools and guides, or bring a practical question to the [free community pilot](https://community.devination.net/build-your-digital-business-card/). The pilot currently supports discussion on published posts; the wider community experience is still being developed.
 
 Using this MIT-licensed template does not require membership, an email signup, a star or a follow. Attribution links in your own card are optional.
+
+## Watch and build along
+
+- [Card resource and free template](https://devination.net/builds/digital-business-card)
+- [Narrated setup overview and complete steps](https://devination.net/guides/digital-business-card-setup)
+- [Fix a missing photo or video](https://devination.net/guides/digital-business-card-missing-media)
+- [Community card build-along](https://community.devination.net/build-your-digital-business-card/) — currently free to join; an account is needed to comment. The template stays usable without membership.

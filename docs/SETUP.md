@@ -69,3 +69,9 @@ Official GitHub references (checked 28 October 2026):
 ## Hero video and contact actions
 
 Read VIDEO-GUIDE.md for generating, inspecting and implementing a hero video. The founder showcase’s name/image/video are included by permission; all other media are fictional. All contact data are demonstrations. Theo and Mira’s clips are included; replace them with your own permitted media when making a personal card. Call and Message buttons appear when their numbers are supplied. Message can open SMS or WhatsApp. Reserved example mobile numbers and example.com email actions are intercepted as demonstrations; enter your own public details to activate real contact routes. Ofcom source checked 28 October 2026: https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbers-for-drama
+
+## Video walkthrough and help
+
+Watch the [93-second setup overview and complete written guide](https://devination.net/guides/digital-business-card-setup). The video follows the local route; this document also covers the browser-only route.
+
+For missing files, watch the [real missing-photo fix and photo/video checks](https://devination.net/guides/digital-business-card-missing-media). Bring a practical question or share your change in the [card build-along](https://community.devination.net/build-your-digital-business-card/).

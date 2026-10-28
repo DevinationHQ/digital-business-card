@@ -64,3 +64,7 @@ Confirm playback, crop and loading time on a real phone. There is always a pause
 - Mira: fictional ceramic designer, generated work video included.
 
 The only real personal likeness is the explicitly approved founder showcase; replace it in a personal copy. See [ASSETS.md](../ASSETS.md).
+
+## Fix a missing file
+
+The [missing-media guide](https://devination.net/guides/digital-business-card-missing-media) shows a real missing-photo case and the exact file/path/export checks. Keep a photo fallback while fixing a video path. The [complete setup guide](https://devination.net/guides/digital-business-card-setup) includes the narrated walkthrough.

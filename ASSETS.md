@@ -16,3 +16,7 @@ The Devination and Circul8tion names identify the kit’s origin, not an endorse
 ## Approved real-person showcase
 
 `assets/photos/founder.jpg` and `assets/video/founder.mp4`, and the founder example’s display name, are included by direct permission for this showcase. They are reserved identity media, not reusable personal identity assets under MIT. Replace them with your own permitted media for a personal card; do not present yourself as this person or imply their endorsement. The owner’s real contact details are not supplied.
+
+## Linked instructional videos
+
+Devination’s externally hosted setup, repair and introduction films are instructional/reference media. They are separate from the MIT-licensed template code; the code licence does not grant rights to Devination branding, narration or every depicted media asset. Use your own permitted identity and media for your personal card.
