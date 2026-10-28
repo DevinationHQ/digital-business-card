@@ -1,5 +1,7 @@
 # Make and publish your Digital Business Card
 
+Prefer an AI coding agent? [Start with the short link-and-prompt video](https://devination.net/guides/digital-business-card-ai-setup). This guide retains the browser-only route.
+
 You need a free GitHub account and a web browser. You do not need to install anything for this route. A repository is simply your own copy of the website files.
 
 Prefer an AI agent? Read [AI-SETUP.md](AI-SETUP.md) for setup, media, publishing and troubleshooting prompts.

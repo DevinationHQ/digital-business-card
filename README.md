@@ -30,6 +30,10 @@ The founder profile includes only the owner-approved display name, image and vid
 
 Keep the source, customise it and host your own copy. No Devination membership or kit subscription is required. Hosting/domain and optional AI services have their own terms. Preserve the licence/dependency notices; media permissions are in ASSETS.md.
 
+## Quick start: copy a link and a prompt
+
+Watch the [28.5-second AI-agent setup video](https://devination.net/guides/digital-business-card-ai-setup) and copy the repository link plus the expanded setup prompt. Use an agent with internet, terminal and project-file access. It prepares a local preview for review; publishing remains a separate step. The browser-only setup guide below remains available.
+
 ## Set up with an AI agent
 
 Follow the [AI-agent setup guide](https://devinationhq.github.io/digital-business-card/agent-guide.html) for copy-ready prompts to customise, add media, publish and fix problems. The same prompts are in [docs/AI-SETUP.md](docs/AI-SETUP.md). An agent needs file/browser access to perform actions; a chat-only assistant can prepare the changes for you.

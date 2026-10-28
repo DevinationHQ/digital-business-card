@@ -1,5 +1,7 @@
 # Set up your Digital Business Card with an AI agent
 
+For the simplest start, [watch the28.5-second guide and copy the repository link plus setup prompt](https://devination.net/guides/digital-business-card-ai-setup). Your agent needs internet, terminal and project-file access. Review its local preview before publishing.
+
 You can ask an AI coding agent to customise this template for you. It needs access to your copy of the files to edit them. A chat-only assistant can prepare the JSON and instructions, but cannot update your computer or GitHub unless it has the necessary tools and permissions.
 
 ## Change more than your details
