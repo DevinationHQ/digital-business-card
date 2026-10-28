@@ -20,11 +20,11 @@ No `npm install` is required. Port busy? Use `npm run dev -- --port 4174`.
 
 | Profile | Theme | Feel |
 | --- | --- | --- |
-| Approved showcase | Forest | Owner-approved display name, image and video; demonstration contacts. |
 | Theo Mercer | Cobalt | Creative developer, sharp shapes, electric blue and warm accents. |
 | Mira Vale | Ivory | Ceramic designer, warm paper colours and softer forms. |
+| Approved showcase | Forest | Owner-approved display name, image and video; demonstration contacts. |
 
-The first profile includes only the owner-approved display name, image and video. Its email, phone, messaging and project links are demonstration data. Theo and Mira are fictional generated examples. No real phone numbers, email addresses, address, collected contacts, credentials or private account data are included. The neutral starter remains available in the editor.
+The founder profile includes only the owner-approved display name, image and video. Its email, phone, messaging and project links are demonstration data. Theo and Mira are fictional generated examples. No real phone numbers, email addresses, address, collected contacts, credentials or private account data are included. The neutral starter remains available in the editor.
 
 ## Beginner setup
 
@@ -86,3 +86,9 @@ Devination — a Circul8tion Systems venture.
 ## Hero-video examples
 
 Theo and Mira’s generated work videos are included. Read [the video guide](docs/VIDEO-GUIDE.md) and [prompts](docs/VIDEO-PROMPTS.md). Video generation is not performed by this kit. Call and Message fields are editable; Message can open SMS or WhatsApp. Empty contact fields hide their buttons.
+
+## Keep building with Devination
+
+Made your Digital Business Card? Explore [Devination’s resources](https://devination.net/resources/) for related tools and guides, or bring a practical question to the [free community pilot](https://community.devination.net/). The pilot currently supports discussion on published posts; the wider community experience is still being developed.
+
+Using this MIT-licensed template does not require membership, an email signup, a star or a follow. Attribution links in your own card are optional.

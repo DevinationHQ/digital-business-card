@@ -58,9 +58,9 @@ Confirm playback, crop and loading time on a real phone. There is always a pause
 
 ## Current example status
 
-- First showcase: approved real-person name/image/video with demonstration contact details.
+- Founder showcase: approved real-person name/image/video with demonstration contact details.
 - Alex Rowan: optional neutral fictional starter, initials only.
 - Theo: fictional designer, corrected studio reference and generated hero video included.
 - Mira: fictional ceramic designer, generated work video included.
 
-The only real personal likeness is the explicitly approved first showcase; replace it in a personal copy. See [ASSETS.md](../ASSETS.md).
+The only real personal likeness is the explicitly approved founder showcase; replace it in a personal copy. See [ASSETS.md](../ASSETS.md).

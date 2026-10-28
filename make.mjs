@@ -38,7 +38,8 @@ $("import").onclick = () => $("import-file").click();
 $("import-file").onchange = async () => { const file = $("import-file").files[0]; if (!file) return; try { if (file.size > 100000) throw new Error("This file is too large. Choose a card JSON under 100 KB."); fill(validateCard(JSON.parse(await file.text()))); dirty = true; status("Card imported. Preview it before publishing."); } catch (e) { error(e instanceof SyntaxError ? new Error("That file is not valid JSON. Choose an exported card.json.") : e); } finally { $("import-file").value = ""; } };
 $("clear-draft").onclick = () => { sessionStorage.removeItem("devination-business-card-draft-v3"); status("Saved browser draft cleared. The current form remains until you leave this page."); };
 try {
-  const example = new URLSearchParams(location.search).get("example");
-  if (["theo", "mira", "blank"].includes(example)) { $("preset").value = example; prior = example; await preset(example); }
+  const requested = new URLSearchParams(location.search).get("example");
+  const example = requested === "theo" ? "starter" : requested;
+  if (["starter", "mira", "founder", "blank"].includes(example)) { $("preset").value = example; prior = example; await preset(example); }
   else { const saved = sessionStorage.getItem("devination-business-card-draft-v3"); if (saved) { fill(validateCard(JSON.parse(saved))); status("Restored this tab’s draft. Nothing has been published."); } else await preset("starter"); }
 } catch (e) { error(e); }

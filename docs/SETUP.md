@@ -38,7 +38,7 @@ Do not upload it beside the existing file or rename it `card (1).json`. The exac
 
 ## 6. Test and share
 
-Open the main website address without `?example=theo` or `?example=mira`. Check your photo/video, all links, Call and Message. Save the contact file on your phone. Use **Show QR → Download QR image** and scan it on a second device before printing.
+Open the main website address without an `?example=` parameter. Check your photo/video, all links, Call and Message. Save the contact file on your phone. Use **Show QR → Download QR image** and scan it on a second device before printing.
 
 The optional published-link setting should contain the actual website address, including the repository path. Leaving it blank shares the current page. Never print a QR created from a local preview.
 
@@ -53,7 +53,7 @@ Download JSON before closing the editor tab. Import it later to resume. For loca
 - **Deployment denied:** check Pages source is GitHub Actions, repository policy permits Pages and the github-pages environment allows `main`. Consult GitHub's actual error; do not add personal access tokens to fix a Pages workflow.
 - **Downloaded QR works on the laptop only:** you used a local preview link. Open the published site and generate a fresh QR.
 - **An old address opens:** check `publicUrl`, clear it or replace it with the current hosted URL, commit, and regenerate your QR.
-- **My card still shows the example:** make sure you replaced `data/card.json`, not a file beside it, and open the main URL without `?example=theo` or `?example=mira`.
+- **My card still shows the example:** make sure you replaced `data/card.json`, not a file beside it, and open the main URL without an `?example=` parameter.
 
 For another static host, run `npm run build` and upload `dist/`. Do not upload credentials, private source notes or an existing app database. A custom domain is optional and configured with your hosting provider.
 
@@ -64,4 +64,4 @@ Official GitHub references (checked 28 October 2026):
 
 ## Hero video and contact actions
 
-Read VIDEO-GUIDE.md for generating, inspecting and implementing a hero video. The first showcase’s name/image/video are included by permission; all other media are fictional. All contact data are demonstrations. Theo and Mira’s clips are included; replace them with your own permitted media when making a personal card. Call and Message buttons appear when their numbers are supplied. Message can open SMS or WhatsApp. Reserved example mobile numbers and example.com email actions are intercepted as demonstrations; enter your own public details to activate real contact routes. Ofcom source checked 28 October 2026: https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbers-for-drama
+Read VIDEO-GUIDE.md for generating, inspecting and implementing a hero video. The founder showcase’s name/image/video are included by permission; all other media are fictional. All contact data are demonstrations. Theo and Mira’s clips are included; replace them with your own permitted media when making a personal card. Call and Message buttons appear when their numbers are supplied. Message can open SMS or WhatsApp. Reserved example mobile numbers and example.com email actions are intercepted as demonstrations; enter your own public details to activate real contact routes. Ofcom source checked 28 October 2026: https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbers-for-drama

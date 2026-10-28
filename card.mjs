@@ -2,7 +2,7 @@ import { validateCard, cardUrl, vcard, download, slug, contactActions } from "./
 import { create } from "./vendor/qr.mjs";
 const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
-const example = ["theo", "mira"].includes(params.get("example")) ? params.get("example") : "";
+const example = ["theo", "mira", "founder"].includes(params.get("example")) ? params.get("example") : "";
 const isDraft = params.get("preview") === "1";
 try { sessionStorage.removeItem("devination-card-draft"); } catch {}
 function say(message) { $("status").textContent = message; $("status").hidden = false; clearTimeout(say.timer); say.timer = setTimeout(() => $("status").hidden = true, 4500); }
@@ -53,7 +53,7 @@ try {
     const words = element("span", "project-words"); words.append(element("strong", "", project.title), element("small", "", project.description)); a.append(words, element("span", "arrow", "↗")); $("projects").append(a);
   }
   if (!card.projects.length) $("projects").previousElementSibling.hidden = true;
-  for (const link of document.querySelectorAll("[data-example]")) if (link.dataset.example === (example || "starter") && !isDraft) link.setAttribute("aria-current", "page");
+  for (const link of document.querySelectorAll("[data-example]")) if (link.dataset.example === (example || "theo") && !isDraft) link.setAttribute("aria-current", "page");
   const local = ["localhost", "127.0.0.1", "[::1]"].includes(new URL(url).hostname); $("local-note").hidden = !local;
   const make = new URL("make.html", location.href); if (example) make.searchParams.set("example", example); document.querySelectorAll('a[href="make.html"]').forEach(a => a.href = make.href);
   if (isDraft) { $("preview-notice").hidden = false; text("preview-notice", "Private browser preview · Download your JSON from Make yours, then replace data/card.json to publish it. Sharing is disabled here."); $("share").disabled = true; $("qr").disabled = true; $("save-contact").disabled = true; }

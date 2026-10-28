@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "theme": "forest",
+  "name": "Chioké Lackless",
+  "role": "Digital Business Card showcase",
+  "location": "Demo profile",
+  "initials": "CL",
+  "eyebrow": "THE PERSON BEHIND THE WORK",
+  "bio": "A video-led introduction, with demonstration contact details.",
+  "email": "hello@example.com",
+  "phone": "+447700900100",
+  "photo": "assets/photos/founder.jpg",
+  "video": "assets/video/founder.mp4",
+  "publicUrl": "",
+  "badges": [
+    "Video showcase",
+    "Demo contacts"
+  ],
+  "sideLabel": "YOUR WORK. ONE CONNECTION.",
+  "headline": "A small card. A proper introduction.",
+  "intro": "A place for the work you make, the things you care about and the next good conversation. Start with this card and make it yours.",
+  "example": false,
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "My portfolio",
+      "description": "A selection of things I have made.",
+      "url": "https://example.com/portfolio"
+    },
+    {
+      "id": "project-2",
+      "title": "Field notes",
+      "description": "Ideas, experiments and what I learned.",
+      "url": "https://example.com/notes"
+    },
+    {
+      "id": "project-3",
+      "title": "Current project",
+      "description": "Something new, taking shape.",
+      "url": "https://example.com/project"
+    }
+  ],
+  "messagePhone": "+447700900100",
+  "messageChannel": "sms",
+  "videoAutoplay": true
+}

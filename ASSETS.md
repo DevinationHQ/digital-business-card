@@ -1,6 +1,6 @@
 # Asset provenance and permissions
 
-The first showcase includes the real owner’s approved display name, portrait and video, restored at the owner’s explicit request. All contact details are demonstrations. Theo and Mira and their work scenes are fictional AI-generated examples. No real contact data, contact database, credentials or private account data are included.
+The founder showcase includes the real owner’s approved display name, portrait and video, restored at the owner’s explicit request. All contact details are demonstrations. Theo and Mira and their work scenes are fictional AI-generated examples. No real contact data, contact database, credentials or private account data are included.
 
 - Theo and Mira portrait/work-reference images were generated for this kit. The Theo work reference was corrected so the monitor faces him.
 - `assets/video/theo-hero.mp4` and `assets/video/mira-hero.mp4` are delivery copies of the two generated clips supplied for this kit. The video track is retained; audio and source container metadata are omitted for the muted website hero. Visible provider marks are preserved and the frames are not cropped.
@@ -15,4 +15,4 @@ The Devination and Circul8tion names identify the kit’s origin, not an endorse
 
 ## Approved real-person showcase
 
-`assets/photos/founder.jpg` and `assets/video/founder.mp4`, and the first example’s display name, are included by direct permission for this showcase. They are reserved identity media, not reusable personal identity assets under MIT. Replace them with your own permitted media for a personal card; do not present yourself as this person or imply their endorsement. The owner’s real contact details are not supplied.
+`assets/photos/founder.jpg` and `assets/video/founder.mp4`, and the founder example’s display name, are included by direct permission for this showcase. They are reserved identity media, not reusable personal identity assets under MIT. Replace them with your own permitted media for a personal card; do not present yourself as this person or imply their endorsement. The owner’s real contact details are not supplied.

@@ -5,9 +5,9 @@ import { validateCard, cardUrl, vcard, webUrl, mediaPath, contactActions } from 
 import { create } from '../vendor/qr.mjs';
 const example = JSON.parse(await readFile(new URL('../data/examples/theo.json', import.meta.url)));
 test('approved showcase and fictional profiles all use demo contacts and include videos', async () => {
-  for (const file of ['card.json', 'examples/theo.json', 'examples/mira.json']) {
+  for (const file of ['card.json', 'examples/theo.json', 'examples/mira.json', 'examples/founder.json']) {
     const card = validateCard(JSON.parse(await readFile(new URL('../data/' + file, import.meta.url))));
-    assert.equal(card.example, file !== 'card.json'); assert.match(card.email, /@example\.com$/); assert.match(card.phone, /^\+447700900\d{3}$/);
+    assert.equal(card.example, file !== 'examples/founder.json'); assert.match(card.email, /@example\.com$/); assert.match(card.phone, /^\+447700900\d{3}$/);
     assert.equal(contactActions(card).length,3); assert.ok(contactActions(card).every(action=>action.demo));
     assert.equal(Boolean(card.video),true);
   }
@@ -27,6 +27,7 @@ test('import rejects executable links and traversal in media paths', () => {
 });
 test('sharing keeps a GitHub project subpath and only the selected public example', () => {
   assert.equal(cardUrl(example, { href: 'https://someone.github.io/my-card/index.html?preview=1#x' }, 'mira'), 'https://someone.github.io/my-card/index.html?example=mira');
+  assert.equal(cardUrl(example, { href: 'https://someone.github.io/my-card/' }, 'founder'), 'https://someone.github.io/my-card/?example=founder');
   assert.equal(cardUrl({ ...example, publicUrl: 'https://my.example/card/' }, { href: 'http://127.0.0.1/' }), 'https://my.example/card/');
 });
 test('contact files preserve Unicode and escape injected vCard content', () => {
