@@ -56,7 +56,7 @@ try {
   for (const link of document.querySelectorAll("[data-example]")) if (link.dataset.example === (example || "theo") && !isDraft) link.setAttribute("aria-current", "page");
   const local = ["localhost", "127.0.0.1", "[::1]"].includes(new URL(url).hostname); $("local-note").hidden = !local;
   const make = new URL("make.html", location.href); if (example) make.searchParams.set("example", example); document.querySelectorAll('a[href="make.html"]').forEach(a => a.href = make.href);
-  if (isDraft) { $("preview-notice").hidden = false; text("preview-notice", "Private browser preview · Download your JSON from Make yours, then replace data/card.json to publish it. Sharing is disabled here."); $("share").disabled = true; $("qr").disabled = true; $("save-contact").disabled = true; }
+  if (isDraft) { $("preview-notice").hidden = false; text("preview-notice", "Private browser preview · Copy your card data or download JSON from Make yours, then replace data/card.json to publish it. Sharing is disabled here."); $("share").disabled = true; $("qr").disabled = true; $("save-contact").disabled = true; }
   $("save-contact").onclick = () => { download(vcard(card, url), `${slug(card.name)}.vcf`, "text/vcard;charset=utf-8"); say("Contact file downloaded. Open it to add this person to your contacts."); };
   function openDialog(showQR) {
     text("dialog-title", showQR ? "Scan to connect" : "Share your card"); text("dialog-help", showQR ? "Point a phone camera at the code to open this card." : "Copy the link and send it in your preferred app."); $("share-url").value = url;

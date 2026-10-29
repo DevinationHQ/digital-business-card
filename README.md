@@ -12,7 +12,7 @@ You need Node.js 20 or later. Open a terminal in this folder:
 npm run dev
 ```
 
-Open the printed address (normally http://127.0.0.1:4173/). Choose **Make yours**, edit a profile and download `card.json`. Replace `data/card.json` in your copy. Do not open `index.html` directly as a file: the browser must load JSON through the local server.
+Open the printed address (normally http://127.0.0.1:4173/). Choose **Make yours**, edit a profile and choose **Copy card data** (or download a JSON backup). Replace `data/card.json` in your copy. Do not open `index.html` directly as a file: the browser must load JSON through the local server.
 
 No `npm install` is required. Port busy? Use `npm run dev -- --port 4174`.
 
@@ -47,8 +47,8 @@ You can do the whole setup in your browser:
 1. Choose **Use this template → Create a new repository** and create your public copy.
 2. In **Settings → Pages**, choose **GitHub Actions**. Run **Publish card to GitHub Pages** from Actions and wait for success.
 3. Upload your photo to `assets/photos/` and optional MP4 to `assets/video/` using **Add file → Upload files**, then commit.
-4. Open your own published website, choose **Make yours**, enter your details and the uploaded file paths, preview, then download `card.json`.
-5. Replace the full contents of your repository's `data/card.json` with that downloaded text and commit. Wait for deployment, check your phone, then download your QR.
+4. Open your own published website, choose **Make yours**, enter your details and the uploaded file paths, preview, then choose **Copy card data**.
+5. Replace the full contents of your repository's `data/card.json` with the complete copied JSON and commit. Wait for deployment, check your phone, then download your QR.
 
 **Typing an image/video path does not upload the file.** The [step-by-step setup guide](docs/SETUP.md) explains every upload, edit and publish step. The [video guide](docs/VIDEO-GUIDE.md) includes generation prompts and implementation instructions. No installation is needed for the browser route.
 
@@ -60,7 +60,7 @@ You can do the whole setup in your browser:
 - Hero video: add an MP4/WebM and set its path. Choose muted automatic playback or visitor-initiated playback. Reduced motion prevents autoplay; pause/play and an image fallback are included. See video-guide.html and docs/VIDEO-GUIDE.md.
 - For a personal card, remove the example navigation from `index.html` if you do not want to offer the demo profiles to visitors. Attribution in the visible interface is optional; retain the MIT copyright/licence notices in source copies.
 
-The browser editor changes a local draft. **It does not update a hosted website**, and is not a private admin panel. Export JSON and commit it to publish. Drafts use this tab's session storage; download before closing the tab. A public `make.html` does not grant anyone write access to the repository.
+The browser editor changes a local draft. **It does not update a hosted website**, and is not a private admin panel. Copy the complete card data and commit it to publish. Download JSON separately for a backup. Drafts use this tab's session storage; download before closing the tab. A public `make.html` does not grant anyone write access to the repository.
 
 Before printing or posting your link, follow the [before-you-share checklist](docs/BEFORE-YOU-SHARE.md).
 
@@ -68,7 +68,7 @@ Before printing or posting your link, follow the [before-you-share checklist](do
 
 QR codes are generated locally with the bundled encoder; no external QR service, analytics or visitor contact-storage endpoint is included. The host can log visits. Any external portrait URL or project link is a separate request to its operator. For the simplest privacy model, keep portrait files in this repository.
 
-The kit does not install an app or create a Wallet pass. Your phone browser may offer an Add to Home Screen shortcut. NFC tags can hold the URL; no direct phone-to-phone NFC sharing is promised.
+The kit does not install an app or create a Wallet pass. Safari and Chrome on iPhone can add it to the Home Screen; menus vary by version. See [the reusable home-screen guide](docs/HOME-SCREEN.md). NFC tags can hold the URL; no direct phone-to-phone NFC sharing is promised.
 
 ## Checks and build
 
@@ -113,3 +113,7 @@ Using this MIT-licensed template does not require membership, an email signup, a
 - [Narrated setup overview and complete steps](https://devination.net/guides/digital-business-card-setup)
 - [Fix a missing photo or video](https://devination.net/guides/digital-business-card-missing-media)
 - [Community card build-along](https://community.devination.net/build-your-digital-business-card/) — currently free to join; an account is needed to comment. The template stays usable without membership.
+
+### Starting on a phone
+
+Use the [phone section of the browser setup guide](https://devinationhq.github.io/digital-business-card/guide.html#phone-start). Start with initials and one link, preview, then copy the complete card data into your own GitHub file. Copying and previewing do not update the published site.

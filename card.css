@@ -1152,3 +1152,12 @@ button:focus-visible,a:focus-visible{
 .connections-tools .admin-muted{
   margin-left: 0
 }}
+
+/* Private mobile setup candidate: retain readable, selectable data and touch targets. */
+.editor #card-data-panel{border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;min-width:0}
+.editor #card-data-panel summary{cursor:pointer;min-height:44px;padding:10px 0}
+.editor #card-data-panel label{display:block;font-size:16px;margin:12px 0 8px}
+.editor #card-data-text{display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;font:16px/1.5 ui-monospace,monospace;white-space:pre;overflow:auto;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px;user-select:text;-webkit-user-select:text}
+.editor input,.editor textarea,.editor select{font-size:16px}
+.editor button{min-height:44px;touch-action:manipulation}
+@media(hover:hover) and (pointer:fine){.editor #copy-card:hover{border-color:var(--accent)}}

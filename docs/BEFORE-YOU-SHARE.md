@@ -1,7 +1,8 @@
 # Before you share your Digital Business Card
 
-Open your published card on your phone and work through this list. Downloading JSON and previewing a draft do not update the published website.
+Open your published card on your phone and work through this list. Copying or downloading JSON and previewing a draft do not update the published website.
 
+- [ ] Confirm your complete card JSON was saved in `data/card.json` and the deployment succeeded; copying alone does not update the site.
 - [ ] Open your main published address without `?example=` or `?preview=`. Check your name, role, introduction and every project link.
 - [ ] Replace the example contacts and identity media. Leave contact fields blank if you do not want them public. Check Call, Email and Message point to your intended details.
 - [ ] Check your portrait loads. If you use a video, test Play/Pause and the photo fallback. Keep the original media somewhere safe; publish a compressed delivery copy you have permission to use.

@@ -6,6 +6,10 @@ You need a free GitHub account and a web browser. You do not need to install any
 
 Prefer an AI agent? Read [AI-SETUP.md](AI-SETUP.md) for setup, media, publishing and troubleshooting prompts.
 
+## Starting on a phone
+
+Safari and Chrome on iPhone can use this browser-only route. Start with the **Blank neutral starter**, your name, role and one working link. Replace all demo contact details and links. Leave photo/video paths blank for initials, then add media later. The editor is a draft, not a hosted admin panel: copy the full card data and save it in your own GitHub file. Ordinary AI chat cannot install or deploy a repository by itself.
+
 ## 1. Copy the template
 
 Open the [Devination template repository](https://github.com/DevinationHQ/digital-business-card). Choose **Use this template → Create a new repository**. Choose your account as Owner, name the copy `my-digital-business-card`, choose **Public**, and create it. Public means anyone can read the files: include only details and media you want public.
@@ -14,7 +18,9 @@ Open the [Devination template repository](https://github.com/DevinationHQ/digita
 
 In your new repository, open **Settings → Pages**. Under **Build and deployment → Source**, choose **GitHub Actions**. Open **Actions → Publish card to GitHub Pages → Run workflow**, choose `main`, and run it. Wait for the green success tick. **Settings → Pages** shows your website address, usually `https://YOUR-ACCOUNT.github.io/my-digital-business-card/`.
 
-## 3. Upload your image and video
+The first automatic workflow can fail before Pages is configured. After choosing GitHub Actions as the Pages source, run the workflow again and check its actual result. A private repository does not by itself make its Pages website private.
+
+## 3. Optional: upload your image and video
 
 In your repository's **Code** tab, open `assets`, then `photos`. Choose **Add file → Upload files**, drop in your portrait (for example `my-photo.jpg`), and choose **Commit changes** to `main`. For video, open `assets/video` and repeat with `my-hero.mp4`.
 
@@ -36,9 +42,9 @@ Leave either media field empty if you do not want it. Choose **Preview my card**
 
 ## 5. Save and publish your changes
 
-Choose **Download card JSON**. Open that downloaded `card.json` with a text editor and copy all its text. In GitHub, open `data/card.json`, choose the pencil, select all existing text and replace it with your downloaded text. Choose **Commit changes** to `main`.
+Choose **Copy card data**. In GitHub, open your own `data/card.json`, choose the pencil, select all OLD file contents and paste the complete copied JSON. Choose **Commit changes** to `main`. On a phone, use the native **Paste** action in the destination. Do not paste beside the old contents. **Download card JSON** remains available as a backup; copying alone does not save a backup file. If copying is unavailable, use **View or select card data → Select all card data**, then Copy, or download the JSON backup.
 
-Do not upload it beside the existing file or rename it `card (1).json`. The exact destination is `data/card.json`. Wait for the green Actions tick, then refresh your website. The editor creates a temporary draft; downloading JSON alone does not update the live card.
+Do not upload it beside the existing file or rename it `card (1).json`. The exact destination is `data/card.json`. Wait for the green Actions tick, then refresh your website. The editor creates a temporary draft; copying or downloading JSON alone does not update the live card.
 
 ## 6. Test and share
 
@@ -77,3 +83,7 @@ Read VIDEO-GUIDE.md for generating, inspecting and implementing a hero video. Th
 Watch the [93-second setup overview and complete written guide](https://devination.net/guides/digital-business-card-setup). The video follows the local route; this document also covers the browser-only route.
 
 For missing files, watch the [real missing-photo fix and photo/video checks](https://devination.net/guides/digital-business-card-missing-media). Bring a practical question or share your change in the [card build-along](https://community.devination.net/build-your-digital-business-card/).
+
+## Add a web app to your phone home screen
+
+See [HOME-SCREEN.md](HOME-SCREEN.md) for Safari/iPhone, Chrome/iPhone and Chrome/Android instructions. Save the clean published URL, not a draft or private preview.

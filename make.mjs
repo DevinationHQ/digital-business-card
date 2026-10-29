@@ -7,15 +7,15 @@ function status(message) { $("editor-error").textContent = ""; $("editor-status"
 function error(e) { $("editor-status").textContent = ""; $("editor-error").textContent = e.message; }
 function projectEditor(project = {}) {
   const section = document.createElement("section"); section.className = "project-editor";
-  const id = crypto.randomUUID();
+  const id = globalThis.crypto?.randomUUID?.() ?? `project-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   for (const [key, label, max] of [["title", "Link title", 100], ["description", "Short description", 180], ["url", "Full web address", 400]]) {
     const l = document.createElement("label"), input = document.createElement("input"); l.htmlFor = `${id}-${key}`; l.textContent = label; input.id = l.htmlFor; input.dataset.field = key; input.maxLength = max; input.value = project[key] || ""; if (key === "url") input.type = "url"; section.append(l, input);
   }
-  const remove = document.createElement("button"); remove.type = "button"; remove.className = "small-button"; remove.textContent = "Remove this link"; remove.onclick = () => { section.remove(); dirty = true; }; section.append(remove); $("project-editors").append(section);
+  const remove = document.createElement("button"); remove.type = "button"; remove.className = "small-button"; remove.textContent = "Remove this link"; remove.onclick = () => { section.remove(); dirty = true; refreshCardData(); }; section.append(remove); $("project-editors").append(section);
 }
 function fill(card) {
   original = card; for (const key of fields) $(key).value = card[key] || ""; $("videoAutoplay").value = String(card.videoAutoplay); $("badges").value = card.badges.join(", ");
-  $("project-editors").replaceChildren(); card.projects.forEach(projectEditor); document.documentElement.dataset.theme = card.theme; dirty = false;
+  $("project-editors").replaceChildren(); card.projects.forEach(projectEditor); document.documentElement.dataset.theme = card.theme; dirty = false; refreshCardData();
 }
 function collect() {
   const raw = { ...original }; for (const key of fields) raw[key] = $(key).value;
@@ -27,12 +27,49 @@ function collect() {
   return validateCard(raw);
 }
 async function preset(value) { const res = await fetch(value === "starter" ? "data/card.json" : `data/examples/${value}.json`); if (!res.ok) throw new Error("That example could not load. Refresh and try again."); fill(validateCard(await res.json())); }
-$("editor-form").addEventListener("input", () => { dirty = true; });
+$("editor-form").addEventListener("input", () => { dirty = true; refreshCardData(); });
 $("theme").addEventListener("change", () => { if (themes.includes($("theme").value)) document.documentElement.dataset.theme = $("theme").value; });
 let prior = "starter";
 $("preset").addEventListener("change", async () => { const value = $("preset").value; if (dirty && !confirm("Replace the current draft with this example? Download your JSON first if you want to keep it.")) { $("preset").value = prior; return; } try { await preset(value); prior = value; status("Example loaded. Make it your own."); } catch (e) { error(e); } });
-$("add-project").onclick = () => { if (document.querySelectorAll(".project-editor").length >= 8) return status("Eight links is the limit for this card."); projectEditor(); dirty = true; };
+$("add-project").onclick = () => { if (document.querySelectorAll(".project-editor").length >= 8) return status("Eight links is the limit for this card."); projectEditor(); dirty = true; refreshCardData(); };
 $("preview").onclick = () => { try { const card = collect(); sessionStorage.setItem("devination-business-card-draft-v3", JSON.stringify(card)); dirty = false; location.href = "index.html?preview=1"; } catch (e) { error(e); } };
+function refreshCardData() { if (!$("card-data-panel").open) return; try { showCardData(); } catch { $("card-data-text").value = ""; } }
+function cardDataText() { return JSON.stringify(collect(), null, 2) + "\n"; }
+function showCardData() { const value = cardDataText(); if ($("card-data-text").value !== value) $("card-data-text").value = value; return value; }
+$("card-data-panel").addEventListener("toggle", () => { if (!$("card-data-panel").open) return; try { showCardData(); } catch (e) { $("card-data-text").value = ""; error(e); } });
+function selectCardData() {
+  const field = $("card-data-text");
+  field.focus(); field.select(); field.setSelectionRange(0, field.value.length);
+}
+function compatibleCopy() {
+  selectCardData();
+  try { return document.execCommand("copy") === true; } catch { return false; }
+}
+$("select-card-data").onclick = () => {
+  try { showCardData(); selectCardData(); status("All card data selected. Choose Copy from the text menu, or tap Copy card data above."); }
+  catch (e) { $("card-data-text").value = ""; error(e); }
+};
+$("copy-card").onclick = async () => {
+  try {
+    const value = showCardData();
+    $("card-data-panel").open = true;
+    sessionStorage.setItem("devination-business-card-draft-v3", value);
+    let copied = false;
+    // Keep the compatibility path inside the tap when Clipboard API is absent.
+    if (!navigator.clipboard?.writeText) copied = compatibleCopy();
+    else {
+      try { await navigator.clipboard.writeText(value); copied = true; }
+      catch { copied = compatibleCopy(); }
+    }
+    if (copied) {
+      dirty = false;
+      status("Card data copied. In your own GitHub repository, replace all of data/card.json with it and commit. Nothing has been published by this editor.");
+    } else {
+      selectCardData();
+      status("Automatic copy is unavailable. Tap Select all card data, then choose Copy from the text menu. You can also download a JSON backup.");
+    }
+  } catch (e) { $("card-data-text").value = ""; error(e); }
+};
 $("export").onclick = () => { try { const card = collect(); download(JSON.stringify(card, null, 2) + "\n", "card.json", "application/json"); sessionStorage.setItem("devination-business-card-draft-v3", JSON.stringify(card)); dirty = false; status("Downloaded card.json. Replace data/card.json in your own repository to publish these details."); } catch (e) { error(e); } };
 $("import").onclick = () => $("import-file").click();
 $("import-file").onchange = async () => { const file = $("import-file").files[0]; if (!file) return; try { if (file.size > 100000) throw new Error("This file is too large. Choose a card JSON under 100 KB."); fill(validateCard(JSON.parse(await file.text()))); dirty = true; status("Card imported. Preview it before publishing."); } catch (e) { error(e instanceof SyntaxError ? new Error("That file is not valid JSON. Choose an exported card.json.") : e); } finally { $("import-file").value = ""; } };
@@ -41,5 +78,5 @@ try {
   const requested = new URLSearchParams(location.search).get("example");
   const example = requested === "theo" ? "starter" : requested;
   if (["starter", "mira", "founder", "blank"].includes(example)) { $("preset").value = example; prior = example; await preset(example); }
-  else { const saved = sessionStorage.getItem("devination-business-card-draft-v3"); if (saved) { fill(validateCard(JSON.parse(saved))); status("Restored this tab’s draft. Nothing has been published."); } else await preset("starter"); }
+  else { const saved = sessionStorage.getItem("devination-business-card-draft-v3"); if (saved) { fill(validateCard(JSON.parse(saved))); $("preset").value = "current-draft"; prior = "current-draft"; status("Restored this tab’s draft. Nothing has been published."); } else await preset("starter"); }
 } catch (e) { error(e); }
